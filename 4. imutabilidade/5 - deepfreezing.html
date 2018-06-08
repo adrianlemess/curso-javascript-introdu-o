@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>05 - Deep Freezing</title>
+</head>
+
+<body>
+</body>
+
+<script>
+    const deepFreeze = (obj) => {
+        const props = Object.getOwnPropertyNames(obj);
+        props.forEach(function (name) {
+            const prop = obj[name];
+            if (typeof prop === 'object' && prop !== null) {
+                deepFreeze(prop);
+            }
+        });
+        return Object.freeze(obj);
+    }
+
+
+    // const data = {
+    //     cliente: {
+    //         nome: 'John Connor'
+    //     }
+    // }
+
+    // // Usando apenas Object.freeze()
+    // Object.freeze(data);
+    // data.cliente.nome = 'Sarah Connor'
+    // console.log(data.cliente.nome); // Sarah Connor
+
+    // // Usando função deepFreeze()
+    // deepFreeze(data);
+    // data.cliente.nome = 'Sarah Connor'
+    // console.log(data.cliente.nome); // John Connor
+
+</script>
+
+</html>

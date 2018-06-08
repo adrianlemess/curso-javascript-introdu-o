@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>04 - temporal dead zone</title>
+</head>
+
+<body>
+</body>
+
+<script>
+    "use strict"
+
+    var callbacks = [];
+
+    for (var i = 0; i < 10; i++) {
+        callbacks.push(function () {
+            console.log(i);
+        })
+    }
+
+    callbacks[2]();
+
+</script>
+
+</html>

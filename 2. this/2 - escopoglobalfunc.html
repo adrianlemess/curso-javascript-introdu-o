@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>02 - Escopo Global func</title>
+</head>
+
+<body>
+</body>
+
+<script>
+
+    function f1() {
+        return this;
+    }
+
+    // No navegador
+    f1() === window; // true
+</script>
+
+</html>

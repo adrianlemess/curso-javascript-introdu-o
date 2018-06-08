@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>03 - Modo estrito</title>
+</head>
+
+<body>
+</body>
+
+<script>
+    function f2() {
+        "use strict"; // assume modo estrito
+        return this;
+    }
+
+    f2() === undefined; // true
+</script>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>05 - Variável Self </title>
+</head>
+
+<body>
+</body>
+
+<script>
+    'use strict';
+
+    var object = {
+        name: 'Matheus',
+        friends: ['João', 'Ana'],
+        loop: function () {
+            this.friends.forEach(function (friend) {
+                console.log(this.name + ' knows ' + friend);
+            });
+        }
+    };
+
+    object.loop();
+// TypeError: Cannot read property 'name' of undefined
+
+</script>
+
+</html>

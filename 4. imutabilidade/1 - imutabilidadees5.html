@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> 01 - Imutabilidade ES5 </title>
+</head>
+
+<body>
+</body>
+
+<script>
+
+    // No angular isso acontece muito só que ao invés de ser variáveis é no this (seria o equivalente ao $scope do angularjs)
+    // item.push(42) without mutation:
+    const itemNew = item.concat([42])
+
+    // item.unshift(42) without mutation:
+    const itemNew = [42].concat(item)
+
+    // item[10] = 42 without mutation:
+    const itemNew = item.slice(0, 10).concat(42).concat(item.slice(11))
+
+    // item.splice(10, 0, 42) without mutation:
+    const itemNew = item.slice(0, 10).concat(42).concat(item.slice(10))
+</script>
+
+</html>
