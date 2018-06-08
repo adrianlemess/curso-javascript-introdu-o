@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>02 - Retornando funções</title>
+</head>
+
+<body>
+
+
+</body>
+
+<script>
+
+    function greaterThan(n) {
+        return function (m) {
+            return m > n;
+        };
+    }
+
+    // greaterThan(5)(10)
+
+    // ou
+    const greaterThan10 = greaterThan(10);
+    
+    greaterThan10(5);
+
+
+</script>
+
+</html>

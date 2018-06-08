@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>04 - Funções anônimas</title>
+</head>
+
+<body>
+
+
+</body>
+
+<script>
+
+    const graterThan = function greaterThan(n) {
+        return function compareTo(m) {
+            return m > n;
+        };
+    }
+
+    // ou
+    const greaterThan = function () {
+        return function (m) {
+            return m > n;
+        };
+    }
+
+    // ou 
+    const greaterThan = () => {
+        return function (m) {
+            return m > n;
+        };
+    }
+</script>
+
+</html>
