@@ -12,11 +12,12 @@
     'use strict';
 
     var object = {
-        name: 'Matheus',
+        name: 'Adrian',
         friends: ['João', 'Ana'],
-        loop: function () {
+        loop: function () { 
+            const self = this;
             this.friends.forEach(function (friend) {
-                console.log(this.name + ' knows ' + friend);
+                console.log(self.name + ' knows ' + friend);
             });
         }
     };

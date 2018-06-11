@@ -10,16 +10,19 @@
 
 <script>
     // exemplo anterior
-    // const object = {
-    //     name: 'Matheus',
-    //     friends: ['João', 'Ana'],
-    //     loop: function () {
-    //         this.friends.forEach((friend) => {
-    //             console.log(this.name + ' knows ' + friend);
-    //         });
-    //     }
-    // };
-
+    const object = {
+        name: 'Matheus',
+        friends: ['João', 'Ana'],
+        loop() {
+            this
+            this.friends.forEach((friend) => {
+                console.log(this.name + ' knows ' + friend);
+            });
+        }
+    };
+    const somaValores = (a, b) => {
+        return a + b;
+    }
     // sem return
     const somaValores = (a, b) => a + b;
 
@@ -29,7 +32,11 @@
     // transformar iterator
     var double = sample.map(function (item) {
         return item * 2;
-    }); 
+    });
+
+    const alunos = ['Borba', 'Max', 'Ilson']
+    
+    alunos.map(nome => 'aluno ' + nome);
 </script>
 
 </html>

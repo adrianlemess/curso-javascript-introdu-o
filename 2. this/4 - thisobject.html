@@ -10,22 +10,28 @@
 
 <script>
 
-    // var object = {
-    //     func: function () {
+    // var pessoa = {
+    //     nome: 'Adrian',
+    //     idade: 24,
+    //     falar: function () {
+    //         console.log('oi');
     //         return this;
     //     }
     // };
-    // console.log(object.func());  //[object Object]
+    // console.log(pessoa.falar());  //[object Object]
 
-//     var father = {
-//     name: "father",
-//     child: {
-//         name: "child",
-//         func: function() {
-//             return this.name;
-//         }
-//     }            
-// }
+    var father = {
+        name: "father",
+        child: {
+            name: "child",
+            func: function () {
+                return this.name;
+            }
+        }
+    }
+
+    console.log(father.child.func());
+
 
 // console.log(father.child.func()); 
 //child

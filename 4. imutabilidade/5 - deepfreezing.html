@@ -21,11 +21,11 @@
     }
 
 
-    // const data = {
-    //     cliente: {
-    //         nome: 'John Connor'
-    //     }
-    // }
+    const data = {
+        cliente: {
+            nome: 'John Connor'
+        }
+    }
 
     // // Usando apenas Object.freeze()
     // Object.freeze(data);
@@ -33,9 +33,9 @@
     // console.log(data.cliente.nome); // Sarah Connor
 
     // // Usando função deepFreeze()
-    // deepFreeze(data);
-    // data.cliente.nome = 'Sarah Connor'
-    // console.log(data.cliente.nome); // John Connor
+    deepFreeze(data);
+    data.cliente.nome = 'Sarah Connor'
+    console.log(data.cliente.nome); // John Connor
 
 </script>
 

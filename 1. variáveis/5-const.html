@@ -1,23 +1,48 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>05 - const</title>
 </head>
+
 <body>
 </body>
 
 <script>
-    // const password;
+    // const password = '123456';
+    // console.log(password);
+    // const password = '654321';
+    // console.log(password);
+
+    // const pessoa = {
+    //     nome: 'Adrian',
+    //     idade: 24
+    // }
+
+    // teste();
     // const password = '123456';
     // console.log(password); // imprimi undefined
     // password = '654321'; // throw erro
 
 
     // Objetos complexos ainda são possíveis de ser alterado
-    // const instrutor = {
-    //     name: 'Adrian',
-    //     age: 24
-    // };
-    
+    const instrutor = {
+        name: 'Adrian',
+        age: 24
+    };
+
+    instrutor.name = 'Paulo';
+
+    instrutor = {
+        nacionalidade: 'brasil'
+    }
+
+    const newArray = [1, 2, 3, 4];
+    newArray.push(5);
+    newArray.push(6);
+    newArray.push(7);
+    console.log(instrutor);
+
 </script>
+
 </html>

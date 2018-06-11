@@ -9,19 +9,26 @@
 </body>
 
 <script>
+    const objeto = {
+        nome: 'lápis',
+        funcao: 'escrever',
+        acessorio: {
+            nome: 'borracha'
+        }
+    }
 
-    // No angular isso acontece muito só que ao invés de ser variáveis é no this (seria o equivalente ao $scope do angularjs)
-    // item.push(42) without mutation:
-    const itemNew = item.concat([42])
 
-    // item.unshift(42) without mutation:
-    const itemNew = [42].concat(item)
+    console.log(objeto);
 
-    // item[10] = 42 without mutation:
-    const itemNew = item.slice(0, 10).concat(42).concat(item.slice(11))
+    Object.freeze(objeto);
 
-    // item.splice(10, 0, 42) without mutation:
-    const itemNew = item.slice(0, 10).concat(42).concat(item.slice(10))
+    objeto.funcao = 'voar';
+
+    console.log(objeto);
+
+    objeto.acessorio.nome = 'botão';
+
+    console.log(objeto);
 </script>
 
 </html>

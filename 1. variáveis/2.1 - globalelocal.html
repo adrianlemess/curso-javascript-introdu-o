@@ -9,16 +9,16 @@
 </body>
 
 <script>
-    var msg = 'Olá...';
+    var hello = 'Olá...';
 
-    function helloMsg(string) {
-        if (string) {
-            var msg = 'Olá ' + string;
-            return msg;
-        }
+    function helloMsg() {
 
-        return msg;
+        hello = 'teste';
     }
+
+    console.log(hello);
+    helloMsg();
+    console.log(hello);
 </script>
 
 </html>

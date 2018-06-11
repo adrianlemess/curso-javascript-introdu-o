@@ -9,12 +9,13 @@
 </body>
 
 <script>
+    'use strict'
     function f2() {
-        "use strict"; // assume modo estrito
+        this.teste = 'Oi';
         return this;
     }
 
-    f2() === undefined; // true
+    console.log(f2()); // true
 </script>
 
 </html>
