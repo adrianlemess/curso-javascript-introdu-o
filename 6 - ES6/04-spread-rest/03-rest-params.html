@@ -7,7 +7,11 @@
 </body>
 
 <script>
-
+function multiplicaTudo() {
+    return Array.from(arguments).reduce((acumulador, valorAtual) => {
+        return acumulador * valorAtual;
+    })
+}
 function multiply(mult, ...args) {
     return args.map(arg => arg * mult);
 }

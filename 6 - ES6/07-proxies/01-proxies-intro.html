@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>01 - Proxies Intro</title>
 </head>
+
 <body>
 </body>
 
 <script>
     let obj = {
-        name: 'Willian',
+        name: 'Adrian',
         age: 26
     };
 
@@ -23,5 +25,20 @@
         }
     });
 
+
+    // Pattern factory
+
+    // paradigma funcional
+    const createProxy = object => new Proxy(object, {
+        get(target, property, receiver) {
+            console.log(`A propriedade "${property}" foi lida.`);
+            return target[property];
+        }
+    });
+
+    let person = { name: 'Adrian Lemes' };
+    person = createProxy(person);
+    console.log(person.name);
 </script>
+
 </html>
