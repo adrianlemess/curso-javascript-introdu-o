@@ -9,14 +9,14 @@
 <script>
     const data = [
         {
-            name: 'Willian',
-            age: 26,
-            city: 'Dublin'
+            name: 'Adrian',
+            age: 24,
+            city: 'Porto Alegre'
         },
         {
             name: 'Jonas',
             age: 22,
-            city: 'Cologne'
+            city: 'Recife'
         }
     ];
 
@@ -26,7 +26,10 @@
     // console.log(underZero);
     // console.log(underZeroIndex);
 
+    // Retorna o objeto encontrado que condiz com a callback
     const jonas = data.find(person => person.name === 'Jonas');
+
+    // Retorna o indice encontrado
     const jonasIndex = data.findIndex(person => person.name === 'Jonas');
     console.log(jonasIndex);
 </script>

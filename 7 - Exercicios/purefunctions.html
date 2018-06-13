@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>09 - Some </title>
+</head>
+
+<body>
+
+
+</body>
+
+<script>
+    // Marque as funções que são puras e refatore-as para deixa-las puras
+
+    // 1
+    function add2(x) {
+        return x + 2;
+    }
+
+    // 2
+    var y  = 2;
+    function adder (x) {
+        return x + y;
+    }
+
+    // 3
+    const highNumber = (num1, num2) => num2 >= num1;
+
+    // 4
+    const addToCart = (cart, item, quantity) => {
+        cart.items.push({
+            item,
+            quantity
+        });
+
+        return cart
+    };
+
+    // 5
+    let minimum = 21;
+    const checkAge = age => age  >= minimum;
+</script>
+
+</html>
