@@ -13,17 +13,19 @@
 <script>
 
     function greaterThan(n) {
-        return function (m) {
+        function teste(m) {
             return m > n;
         };
+
+        return teste(m);
     }
 
     // greaterThan(5)(10)
 
     // ou
-    const greaterThan10 = greaterThan(10);
-    
-    greaterThan10(5);
+    // const greaterThan10 = greaterThan(10);
+
+    // greaterThan10(5);
 </script>
 
 </html>

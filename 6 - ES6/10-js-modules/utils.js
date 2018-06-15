@@ -2,6 +2,13 @@ function sum(a, b) {
     return a + b;
 }
 
+export const TESTE = 'TESTE';
+export const TESTE1 = 'TESTE1';
+export const TESTE2 = 'TESTE2';
+
+
+import { TESTE, TESTE1, TESTE2 } from './constants';
+
 // named export
 // ter vários exports dentro de um 
 // msm arquivo
@@ -28,3 +35,4 @@ export { mult as multiplicacao, div, PI };
 // importar com qq nome
 // não precisa utilizar as chaves
 export default sum;
+

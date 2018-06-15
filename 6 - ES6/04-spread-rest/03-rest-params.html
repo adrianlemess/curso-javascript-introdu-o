@@ -7,16 +7,16 @@
 </body>
 
 <script>
-function multiplicaTudo() {
-    return Array.from(arguments).reduce((acumulador, valorAtual) => {
+function multiplicaTudo(...args) {
+    return args.reduce((acumulador, valorAtual) => {
         return acumulador * valorAtual;
     })
 }
-function multiply(mult, ...args) {
+function multiply(mult, ...variosNumeros) {
     return args.map(arg => arg * mult);
 }
 
-console.log(multiply(5, 1, 2, 3, 4, 5, 6));
+// console.log(multiply(5, 1, 2, 3, 4, 5, 6));
 
 </script>
 </html>

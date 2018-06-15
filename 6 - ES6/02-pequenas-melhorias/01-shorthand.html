@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>01 - Shorthand Properties</title>
 </head>
+
 <body>
 </body>
 
@@ -11,12 +13,25 @@
     let surname = 'Lemes';
     let age = 24;
 
-    const person = {
-        firstName: firstName,
-        surname: surname,
-        age: age,
+    criaPessoa({ nome: 'Adrian', sobrenome: 'Lemes', outraFlag: true })
 
-        hello: function() {
+    function criaPessoa({ nome: firstName, 
+        sobrenome: surname, idade: age, flagLigaAlgumacoisa, outraFlag }) {
+        return {
+            firstName,
+            surname,
+            age
+        }
+    }
+
+    // criaPessoa('Adrian', 'Lemes', 23)
+
+    const person = {
+        firstName,
+        surname,
+        age,
+
+        hello() {
             console.log('Hello!')
         }
     };
@@ -26,4 +41,5 @@
     person.hello();
 
 </script>
+
 </html>

@@ -10,14 +10,10 @@
     let front = ['react', 'vue', 'angular'];
     let back = ['python', 'spring', 'nodejs'];
 
-    let fullStack = [];
-    fullStack = fullStack.concat(front);
-    fullStack.push('RxJS');
-    fullStack = fullStack.concat(back);
+    const fullstack = [...front, 'rxjs', ...back ];
     
     console.log(fullStack);
-
-    // console.log([...'Adrian']);
-    // console.log(...front);
+    console.log([...'Adrian']);
+    console.log(...2);
 </script>
 </html>

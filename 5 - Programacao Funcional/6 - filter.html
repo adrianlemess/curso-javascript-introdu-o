@@ -12,11 +12,21 @@
 
 <script>
     // Sintaxe filter((elementAtual, index, array) => {});
-    const numbers = [1, 4, 7, 10];
+    // const numbers = [1, 4, 7, 10];
 
-    const isBiggerThanFour = (value) => value > 4;
+    // const isBiggerThanFour = (value) => value > 4;
 
-    const numbersBiggerThanFour = numbers.filter(isBiggerThanFour); // [7, 10]
+    // const numbersBiggerThanFour = numbers.filter(isBiggerThanFour); // [7, 10]
+
+    const arrayPessoas = [
+        { nome: 'Adrian', sobrenome: 'Lemes', funcao: 'Instrutor' },
+        { nome: 'Ricardo', sobrenome: 'Potiguar', funcao: 'aluno' },
+        { nome: 'Max', sobrenome: 'Muller', funcao: 'aluno' }]
+
+    const ArrayNomeSobrenomeAlunos = 
+        arrayPessoas
+            .filter(pessoa => pessoa.funcao === 'aluno' )
+            .map(aluno => aluno.nome + ' ' + aluno.sobrenome);
 
 </script>
 

@@ -7,9 +7,7 @@
 </body>
 
 <script>
-    function hello (name, surname) {
-        name = name | 'Adrian';
-        surname = surname | 'Lemes';
+    function hello (name = 'Adrian', surname = 'Lemes') {
         console.log(`Hello ${name} ${surname}! How are you?`);
     }
 

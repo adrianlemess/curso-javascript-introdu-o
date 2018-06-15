@@ -11,6 +11,19 @@
 </body>
 
 <script>
+
+    function isBigEnough(array) {
+        var isBigEnough = true;
+
+        for(var i = 0; i < array.length; i++) {
+            if(array[i] <= 10) {
+                isBigEnough = false;
+                break;
+            }
+        }
+
+        return isBigEnough;
+    }
     // Sintaxe: .every((currentValue, index, array))
 
     function isBigEnough(element, index, array) {

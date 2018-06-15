@@ -17,30 +17,31 @@
         }
     };
     
-    const name = data.name;
-    const surname = data.surname;
-    const twitter = data.social.twitter;
-    console.log(name);
-    console.log(surname);
-    console.log(twitter);
-    
-    
-    // const { name, surname } = data;
+    // const name = data.name;
+    // const surname = data.surname;
+    // const twitter = data.social.twitter;
     // console.log(name);
     // console.log(surname);
-
-    // const { facebook, twitter } = data.social;
-
-    // console.log(facebook);
     // console.log(twitter);
+    
+    
+    const { name, surname } = data;
+    console.log(name);
+    console.log(surname);
 
+    const { facebook, linkledin } = data.usuario;
+    const { facebook, twitter } = data.social;
 
-    // const { facebook: fb } = data.social;
+    console.log(facebook);
+    console.log(twitter);
+    
+    const { facebook: fb } = data.social;
     
     // console.log(fb);
 
-    // const { city = 'Porto Alegre' } = data;
-    // console.log(city);
+    const { city = 'Porto Alegre' } = data;
+    console.log(city);
 
 </script>
 </html>
+

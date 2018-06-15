@@ -11,4 +11,3 @@
 - 5 - Imutabilidade
 - 6 - Programação funcional
 - 7 - ES6
-- 8 - Boas Práticas

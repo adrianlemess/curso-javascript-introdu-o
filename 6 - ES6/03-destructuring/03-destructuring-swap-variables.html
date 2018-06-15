@@ -20,12 +20,18 @@
     console.log("a: ", a);
     console.log("b: ", b);
 
-    const testeArray = [1, 6, 20, 'sapato', 25];
+    // const testeArray = [1, 6, 20, 'sapato', 25];
     const swapVariablesInArray = (arr, posA, posB) => {
         [arr[posA], arr[posB]] = [arr[posB], arr[posA]]
     }
 
     swapVariablesInArray(testeArray, 1, 3);
+
+    const swapVariablesInArray2 = (arrayAntigo, posA, posB) => {
+		const arr = [...arrayAntigo];
+        [arr[posA], arr[posB]] = [arr[posB], arr[posA]];
+		return arr;
+    }
 </script>
 
 </html>
