@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>04 - Promises Múltiplas</title>
 </head>
+
 <body>
 </body>
 
 <script>
-    const currency = new Promise((resolve, reject) => {
+    const currency1 = new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve({ currency: 'euro', value: 3.50 });
         }, 5000);
     });
 
-    const countries = new Promise((resolve, reject) => {
-        resolve(['Ireland', 'England', 'Scotland']);
+    const currency2 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve({ currency: 'dolar', value: 3.50 });
+        }, 2000);
     });
+
+    const currency3 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve({ currency: 'libras', value: 3.50 });
+        }, 8000);
+    });
+
+    // const countries =
+    //     new Promise((resolve, reject) => {
+    //         resolve(['Ireland', 'England', 'Scotland']);
+    //     });
 
     // Promise
     //     .all([currency, countries])
@@ -23,11 +38,23 @@
     //         console.log(responses);
     //     })
 
+    // const items = ['produto1', 'produto2', 'produto3'];
+    // const getStuff = (produto) => {
+    //     return new Promise((resolve, reject) => {
+    //         setTimeout(() => {
+    //             console.log(produto);
+    //             resolve(produto + ' salvo');
+    //         }, 3000)
+    //     })
+    // }
+
+    // Promise.all(items.map(item => getStuff(item))
+    // ).then(result => console.log(result))
     // Promise
     //     .race([currency, countries])
     //     .then(responses => {
     //         console.log(responses);
     //     })
-
 </script>
+
 </html>

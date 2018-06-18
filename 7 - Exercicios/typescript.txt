@@ -1,0 +1,22 @@
+- O exercicio vai ser criar uma concessionária. 
+
+- Pessoa será o comprador e  tem nome, carroFavorito (modelo) e lista de carro (modelos). 
+- A concessionaria pode possuir modelos de moto, carro e caminhoes. 
+    - carro tem de atributo: MODELO, VELOCIDADE, E NUMERO DE PORTAS 
+    - moto tem de atributo: MODELO, VELOCIDADE, NUMERO DE PORTAS e flagTemBau - 
+    - caminhão tem de atributo: MODELO, VELOCIDADE, NUMERO DE PORTAS e PORTE DO CAMINHAO 
+    - Todos possuem o método acelerar, parar e velocidadeAtual, porém a implementação do acelerar é uma velocidade diferente para cada tipo 
+
+- Crie uma interface para concessionaria garantindo a assinatura do método fornecerHorariosDeFuncionamento retornando string 
+- A concessionaria tem endereco, uma listaDeCarros disponiveis e getters para esses métodos 
+- A concessionaria deve ter um método que retorne o horárioDeFuncionamento em forma de texto   
+- Crie uma daoInterface com os métodos e atributos
+	- string nomeTabela     
+	- inserir(object: any): boolean    
+	- atualizar(object: any): boolean     
+	- remover(id: number): any     
+	- selecionar(id: number): any     
+	- selecionarTodos(): [any]  
+- Implemente uma dao para pessoa, concessionario e veiculo (a implementação pode ser apenas um console.log)  
+- Implemente um método comprar onde uma pessoa busca comprar um carro através de um modelo. 
+- Implemente um método comprarCarroFavorito onde é necessário primeiro verificar se a concessionária tem o carro favorito da pessoa.

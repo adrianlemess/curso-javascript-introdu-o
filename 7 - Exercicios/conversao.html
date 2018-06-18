@@ -13,42 +13,43 @@
 <script>
     /* Converta o código abaixo para ES6
         concatenação - templatestring
-        const e let
+        const e const
         shorthand param
         default param
         arrow function
+        promise
         classes
         etc...
     */
     function buscaArquivoNoSistema(nomeArquivo, callback) {
-        nomeArquivo = nomeArquivo || 'filename';
-        setTimeout(() => {
-            console.log('buscou o arquivo' + nomeArquivo);
-
-            callback(null, nomeArquivo)
-        }, 300)
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log('buscou o arquivo' + nomeArquivo);
+    
+                resolve(nomeArquivo);
+            }, 300)
+        })
     }
 
-    var salvaArquivoNoServidor = function (urlServico, arquivo, callback) {
-        urlServico = urlServico || 'https://padrao.com.br';
-        setTimeout(() => {
-            if (!arquivo)
-                return callback(new Error('arquivo não existe'), null);
-            console.log('salvou no servidor' + urlServico);
-
-            callback(null, urlServico)
-        }, 300)
+    const salvaArquivoNoServidor = function (urlServico, arquivo, callback) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (!arquivo)
+                    return reject('arquivo não existe');
+                console.log('salvou no servidor' + urlServico);
+    
+                resolve(urlServico)
+            }, 300)
+        })
     }
 
-    var somaMultiplosNumeros = function () {
-        var numerosArray = arguments;
-
-        return numerosArray.reduce(function (acumulador, numeroAtual) {
+    const somaMultiplosNumeros = (...numerosArray) => {
+        return numerosArray.reduce((acumulador, numeroAtual) => {
             return acumulador + numeroAtual;
         });
     }
 
-    // chama os serviços de buscar arquivo e salvar no servidor 
+    // chama os serviços de buscar arquivo e salconst no servidor 
     function handlerArquivo() {
         buscaArquivoNoSistema('teste1', function (err, arquivo) {
             if (!err)
@@ -58,11 +59,11 @@
                 })
         })
     }
-
-    var father = {
-        name: "Marcelo",
+    const name = "marcelo";
+    const father = {
+        name,
         friendsFather: ['João', 'Maria'],
-        olaAmigos: function() {
+        olaAmigos() {
             this.friendsFather.map(function(value) {
                 console.log(this.name + " conhece " + value);
             })
